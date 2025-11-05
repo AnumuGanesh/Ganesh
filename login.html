@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login · PDF Renamer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>🔐 PDF Renamer</h1>
+      <p class="muted">Sign in to continue</p>
+      {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+      <form method="post">
+        <label>Email / Username</label>
+        <input type="text" name="username" placeholder="admin@123" required>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="1234" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
